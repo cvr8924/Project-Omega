@@ -1,4 +1,4 @@
-package heirarchy;
+package entities;
 
 import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ abstract class Character {
 
     //Implement with abilities
     private ArrayList<Ability> abilities;
-
+    private ArrayList<Item> equipedItems;
 
     public Character(String name, int hp,int mana, int str, int wis, int speed){
         this.name = name;
@@ -54,6 +54,10 @@ abstract class Character {
 
     public ArrayList<Ability> getAbilities() {
         return abilities;
+    }
+
+    public ArrayList<Item> getEquipedItems() {
+        return equipedItems;
     }
 
     public void setHp(int hp) {

@@ -1,4 +1,4 @@
-package heirarchy;
+package entities;
 
 public class TestMain {
 
