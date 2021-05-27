@@ -24,7 +24,7 @@ abstract class Skill extends Ability {
             return true;
         }
         else{
-            return false
+            return false;
         }
     }
 
