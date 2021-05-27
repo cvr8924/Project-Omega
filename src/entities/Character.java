@@ -10,18 +10,22 @@ abstract class Character {
     private int speed;
     private int str;
     private int wis;
+    private int def;
+    private int level;
 
     //Implement with abilities
     private ArrayList<Ability> abilities;
     private ArrayList<Item> equipedItems;
 
-    public Character(String name, int hp,int mana, int str, int wis, int speed){
+    public Character(String name, int hp,int mana, int str, int wis, int def, int speed, int level){
         this.name = name;
         this.hp = hp;
         this.mana = mana;
         this.speed = speed;
         this.str = str;
         this.wis = wis;
+        this.def = def;
+        this.level = level;
     }
 
     public abstract void use(Item item);
@@ -49,8 +53,16 @@ abstract class Character {
         return wis;
     }
 
+    public int getDef() {
+        return def;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public int getLevel() {
+        return level;
     }
 
     public ArrayList<Ability> getAbilities() {
@@ -92,5 +104,18 @@ abstract class Character {
     public void depleteHP(int damage){
         this.hp -= damage;
     }
+
+    public void consolePrint(){
+        System.out.println(getName() + ", Level " + getLevel());
+        System.out.println("______________");
+        System.out.println("HP: "+getHp());
+        System.out.println("Mana: " + getMana());
+        System.out.println("Strength: " + getStr());
+        System.out.println("Magic: " +getWis());
+        System.out.println("Speed: "+ getSpeed());
+        System.out.println("Defense: " + getDef());
+
+    }
+
 
 }
