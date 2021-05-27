@@ -28,6 +28,7 @@ abstract class Character {
 
 
 
+    //getters
     public int getHp() {
         return hp;
     }
@@ -60,6 +61,8 @@ abstract class Character {
         return equipedItems;
     }
 
+
+    //Setters
     public void setHp(int hp) {
         this.hp = hp;
     }
@@ -78,6 +81,16 @@ abstract class Character {
 
     public void setWis(int wis) {
         this.wis = wis;
+    }
+
+
+    //utility
+    public void depleteMana(int cost){ //kor should override this
+        this.mana -= cost;
+    }
+
+    public void depleteHP(int damage){
+        this.hp -= damage;
     }
 
 }
