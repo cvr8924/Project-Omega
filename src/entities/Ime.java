@@ -1,6 +1,6 @@
 package entities;
 
-public class Ime extends Character{
+public class Ime extends PlayerCharacter{
 
     public Ime(){
         super("Ime",15,5,15,10,15,5,1);

@@ -28,7 +28,7 @@ abstract class Character {
         this.level = level;
     }
 
-    public abstract void use(Item item);
+
 
 
 

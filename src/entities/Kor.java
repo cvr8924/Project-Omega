@@ -1,6 +1,6 @@
 package entities;
 
-public class Kor extends Character{
+public class Kor extends PlayerCharacter{
 
 
     public Kor(){
