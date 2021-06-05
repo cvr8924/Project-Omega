@@ -12,6 +12,8 @@ abstract class Character {
     private int wis;
     private int def;
     private int level;
+    private int currentHp;
+    private int currentMana;
 
     //Implement with abilities
     private ArrayList<Ability> abilities;
@@ -26,6 +28,8 @@ abstract class Character {
         this.wis = wis;
         this.def = def;
         this.level = level;
+        this.currentHp = hp;
+        this.currentMana = mana;
     }
 
 
@@ -64,6 +68,15 @@ abstract class Character {
     public int getLevel() {
         return level;
     }
+
+    public int getCurrentHp() {
+        return currentHp;
+    }
+
+    public int getCurrentMana() {
+        return currentMana;
+    }
+
 
     public ArrayList<Ability> getAbilities() {
         return abilities;
