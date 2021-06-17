@@ -18,6 +18,8 @@ public class Save {
 
         Map<String, Object> map = new HashMap<>();
 
+
+        // char data saver
         String[] characters = {"kor","lyr","ima"};
         Character character;
         for (String characterName: characters) {
@@ -51,15 +53,12 @@ public class Save {
         /*
     public void characterStatWrapper(Kor kor, Lyr lyr, Ime ime){
 
-
-
-
-
     }
     */
 
 
     public void load(String filename){
+
 
     }
 
