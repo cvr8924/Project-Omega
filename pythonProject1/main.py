@@ -1,16 +1,35 @@
-# This is a sample Python script.
+import arcade
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+# Constants
+screenWidth = 1000
+screenHeight = 650
+screenTitle = "Game"
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+class Game(arcade.Window):
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    def __init__(self):
+
+        # Call the parent class and set up the window
+        super().__init__(screenWidth, screenHeight, screenTitle)
+        arcade.set_background_color(arcade.csscolor.CORNFLOWER_BLUE)
+
+    def setup(self):
+        """ Set up the game here. Call this function to restart the game. """
+        pass
+
+    def on_draw(self):
+        """ Render the screen. """
+
+        arcade.start_render()
+        # Code to draw the screen goes here
+
+
+def main():
+
+    window = Game()
+    window.setup()
+    arcade.run()
+
+    if __name__ == "__main__":
+        main()
